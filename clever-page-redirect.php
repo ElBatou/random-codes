@@ -1,10 +1,10 @@
-function my_page_template_redirect() {
-    if (is_page(15837)) {
+function my_custom_template_redirect() {
+    if (is_page(ID)) {
         if (is_user_logged_in()) {
-            wp_redirect(get_permalink(12037));
+            wp_redirect(get_permalink(OTHER_ID));
             exit();
         }
     }
 }
 
-add_action('template_redirect', 'my_page_template_redirect');
+add_action('template_redirect', 'my_custom_template_redirect');
