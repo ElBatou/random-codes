@@ -1,0 +1,14 @@
+#multiple ssh keys on Linux
+#one account
+Host github-one
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_one
+    IdentitiesOnly yes
+ 
+#buddyworks account
+Host app.buddy.works
+    HostName app.buddy.works
+    User buddy
+    IdentityFile ~/.ssh/id_rsa_buddy
+    IdentitiesOnly yes 
