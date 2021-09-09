@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aspect ratio test</title>
+    <style>
+        .wrap {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        .wrap div {
+            color: white;
+            margin-bottom: 2rem;
+            margin-right: 2rem;
+            width: 300px;
+            padding: 1rem;
+        }
+
+        .aspect-1 {
+            background-color: blue;
+            aspect-ratio: 1;
+        }
+
+        .aspect-16-9 {
+            background-color: green;
+            aspect-ratio: 16 / 9;
+        }
+
+        .aspect-half {
+            background-color: indigo;
+            aspect-ratio: 0.5;
+        }
+
+
+        .card {
+            background-color: hsl(0, 100%, 100%);
+            border-radius: 4px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+            border: solid 1px hsl(100, 100%, 0%);
+            box-shadow: 5px 10px #888888;
+            max-width: 344px;
+            margin: 24px auto;
+        }
+
+        @media (min-width: 768px) {
+            .card {
+                flex-direction: row;
+                max-width: 700px;
+            }
+        }
+
+        .image {
+            background-color: hsl(0, 100%, 50%);
+            padding: 16px;
+            object-fit: contain;
+            width: 350px;
+            /*  Base width */
+            aspect-ratio: 16/9;
+        }
+
+        .content {
+            width: 100%;
+            padding: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="aspect-1">
+            Aspect 1/1
+        </div>
+
+        <div class="aspect-16-9">
+            Aspect 16/9
+        </div>
+
+        <div class="aspect-half">
+            Aspect 0.5
+        </div>
+    </div>
+
+    <div class="card">
+        <img class="image" src="https://dummyimage.com/600x400/ff00ff/ffffff">
+        <div class="content">
+            <h2>A fancy title</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tincidunt pulvinar massa, non maximus massa
+                bibendum a. Suspendisse potenti.</p>
+        </div>
+    </div>
+</body>
+
+</html>
